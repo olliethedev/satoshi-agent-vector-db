@@ -42,7 +42,7 @@ const typesenseVectorStoreConfig = {
 
 export async function GET() {
     if (process.env.NODE_ENV === "production"){
-      throw new Error("dont use in prod. just an example to populate typesense");
+      return NextResponse.json({message: "not in prod"});
     }
     const docs = await loadGithubDocs();
     console.log("got docs");
