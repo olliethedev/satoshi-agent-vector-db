@@ -41,7 +41,9 @@ const typesenseVectorStoreConfig = {
 } satisfies TypesenseConfig;
 
 export async function GET() {
-    throw new Error("dont use in prod. just an example to populate typesense");
+    if (process.env.NODE_ENV === "production"){
+      throw new Error("dont use in prod. just an example to populate typesense");
+    }
     const docs = await loadGithubDocs();
     console.log("got docs");
     const resultSave = await saveDocsToTypesense(docs);

@@ -37,6 +37,7 @@ const typesenseVectorStoreConfig = {
 } satisfies TypesenseConfig;
 
 export async function POST(req: Request) {
+    console.log(process.env.NODE_ENV);
     const { prompt } = await req.json()
     console.log("got prompt:"+prompt);
     const vectorStore = await getVectorStoreWithTypesense();
