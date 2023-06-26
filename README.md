@@ -1,3 +1,8 @@
+# Satoshi Agent Core service
+
+This is vectore db service used by the [Satoshi Agent](https://www.satoshiagent.com/).
+This service is a semantic search engine. It is lightning paywall enabled and can be used to monetize the service. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
